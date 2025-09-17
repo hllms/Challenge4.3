@@ -19,10 +19,13 @@
         }
         static void Main(string[] args)
         {
-            string[] array = { "H", "a", "n", "n", "a", "h" };
+            string[] array = { "a", "b", "c", "d", "e", "f" };
             ReverseArrayInplace(array);
-            Console.WriteLine("and return");
+            Console.WriteLine("and return again");
             ReverseArrayInplace(array);
+
+            string output = "Test";
+            ReverseArrayInplace(output.ToArray());
         }
     }
 }
