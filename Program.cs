@@ -4,16 +4,13 @@
     {
         static void ReverseArrayInplace<T>(T[] array)
         {
-            T tempHead = default(T);
-            T tempTail = default(T);
-            for (int i = 0; i <= array.Length / 2; i++)
+            int left = 0, right = array.Length - 1;
+            while (left < right)
             {
-                tempHead = array[i];
-                tempTail = array[array.Length - 1 - i];
-
-                array[i] = tempTail;
-                array[array.Length - 1 - i] = tempHead;
+                (array[left], array[right]) = (array[right], array[left]);
+                left++; right--;
             }
+
             string output = string.Join(", ", array);
             Console.WriteLine(output);
         }
